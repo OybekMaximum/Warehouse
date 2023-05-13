@@ -11,7 +11,7 @@ public class Inventory {
     public static List<Product> loadInventory() {
         List<Product> inventory = new ArrayList<>();
 
-        try (InputStream inputStream = Inventory.class.getResourceAsStream("/inventory.txt");
+        try (InputStream inputStream = Inventory.class.getResourceAsStream("/inventory.csv");
              BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -25,7 +25,7 @@ public class Inventory {
                 inventory.add(product);
             }
         } catch (IOException e) {
-            System.err.println("Error reading inventory.txt file: " + e.getMessage());
+            System.err.println("Error reading inventory.csv file: " + e.getMessage());
         }
 
         return inventory;
