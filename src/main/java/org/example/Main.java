@@ -11,7 +11,7 @@ public class Main {
     }
 
     private static void menu() {
-        System.out.println("Warehouse v1.0 (Created on May 11, 2023)");
+        System.out.println("Warehouse Search System (Created on May 11, 2023)");
         System.out.println("Developer: Oybek Tulaboev (treyktoriya@gmail.com)");
 
 
