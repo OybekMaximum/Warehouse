@@ -1,8 +1,11 @@
 package org.example.view;
 
-import static org.example.controller.ConsoleViewController.control;
+
+import org.example.controller.ConsoleViewController;
 
 public class ConsoleView {
+
+    private final ConsoleViewController control = new ConsoleViewController();
 
     public static void main(String[] args) {
         System.out.println("Medication Warehouse (Created on May 11, 2023)");
@@ -13,6 +16,13 @@ public class ConsoleView {
         System.out.println("1. Search products");
         System.out.println("2. List all products");
         System.out.println("3. Exit");
-        control();
+
+        ConsoleView consoleView = new ConsoleView();
+        consoleView.start();
     }
+
+    public void start() {
+        control.control();
+    }
+
 }

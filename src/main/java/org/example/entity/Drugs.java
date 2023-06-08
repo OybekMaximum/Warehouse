@@ -1,4 +1,4 @@
-package org.example.dao;
+package org.example.entity;
 
 public class Drugs {
     private int id;

@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.dao.Drugs;
+import org.example.entity.Drugs;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ListDrugsService {
 
-    public static void listDrug(String order, List<Drugs> drugs) {
+    public void listDrug(String order, List<Drugs> drugs) {
         List<Drugs> sorted = new ArrayList<>(drugs);
         switch (order) {
             case "id":
